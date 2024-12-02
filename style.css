@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #1b1b1b;
+    --color-secondary: #1E1E28;
+    --color-background: #20202A;
+    --color-foreground: #252531;
+    --color-foreground2: #2C2B38;
+
+    --color-one: #FEC02F;
+    --color-two: #F2453D;
+    --color-three: #50AE55;
+    --color-four: #6786F4;
+
+    --font-primary: "Poppins";
+    --font-secondary: "Courier Prime"
+}
+
+body {
+    background: var(--color-primary);
+}
+
+/* ? ROOT ^^^^^^^^^^^^^^^^ */
+
+
+
+
+/* ! HEADER */
+header {
+    background: var(--color-foreground2);
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+
+    p {
+        position: absolute;
+        right: -550px;
+        animation: scroll 7s infinite linear 1s;
+        text-align: end;
+        text-wrap: nowrap;
+
+    }
+
+    .fa-car-side {
+        position: relative;
+    }
+}
+
+header span {
+    position: absolute;
+    color: red;
+    top: -24px;
+    left: 10px;
+    animation: blink 7s infinite linear;
+}
+
+
+@keyframes scroll {
+    1% {right: -500px}
+    25% {right: 0}
+    50% {right: 600px}
+    75% {right: 1200px}
+    100% {right: 1700px}
+}
+
+@keyframes blink {
+    0% {transform: scale(0);
+    text-shadow: 0 0 1px red;
+    }
+    5% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }
+    10% {transform: scale(0);
+    text-shadow: 0 0 1px red;
+    }
+    15% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }
+    20% {transform: scale(0);
+        text-shadow: 0 0 1px red;
+    }
+    25% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }    
+    30% {transform: scale(0);
+    text-shadow: 0 0 1px red;
+    }
+    35% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }
+    40% {transform: scale(0);
+    text-shadow: 0 0 1px red;
+    }
+    45% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }
+    50% {transform: scale(0);
+        text-shadow: 0 0 1px red;
+    }
+    55% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }    
+    60% {transform: scale(0);
+        text-shadow: 0 0 1px red;
+    }
+    65% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }    
+    70% {transform: scale(0);
+    text-shadow: 0 0 1px red;
+    }
+    75% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }
+    80% {transform: scale(0);
+    text-shadow: 0 0 1px red;
+    }
+    85% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }
+    90% {transform: scale(0);
+        text-shadow: 0 0 1px red;
+        }
+    10% {transform: scale(1.5);
+        text-shadow: 0 0 2px red;
+    }
+
+
+}
+
+
+
+
+
+
+/* ! MAIN */
+main {
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    padding: 2rem 6rem;
+    grid-template-areas: 
+    "big big big"
+    "small_1 small_2 small_3"
+    "small_4 small_5 small_3"
+    "small_6 small_7 small_7"
+    "big2 big2 big2";
+    gap: 2rem
+    ;
+}
+
+
+/* !BIG BOX*/
+.big {
+    background: var(--color-foreground2);
+    grid-area: big;
+    height: 300px;
+    position: relative;
+    padding: 2rem;
+    background: url(https://cdn.britannica.com/10/241010-049-3EB67AA2.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+
+    img {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        background: var(--color-primary);
+        border-radius: 50%;
+        border: 2px solid var(--color-one);
+    }
+}
+
+
+.intro  {
+    position: relative;
+    left: 250px;
+
+    h1 {
+        font-family: var(--font-primary);
+        color: var(--color-one);
+    }
+
+    p {
+        font-family: var(--font-secondary);
+        color: var(--color-background);
+    }
+}
+
+.icons {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    text-align: end;
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+
+    i {
+        transition: transform 50ms linear;
+    }
+}
+
+a:link,
+a:active,
+a:visited {
+    color: var(--color-two);
+}
+
+.fa-facebook:hover {
+    color: #0866ff;
+}
+
+.fa-instagram:hover {
+    color: white;
+}
+.fa-linkedin:hover {
+    color: #0a66c2;
+}
+.fa-x-twitter:hover {
+    color: black;
+}
+
+.fa-tiktok:hover {
+    color: black;
+    text-shadow: -1px -1px 1px #25f4ee,
+    1px 1px 1px #fe2c55;
+}
+
+i:hover {
+    transform: scale(1.5);
+}
+
+
+
+
+
+
+/* !SMALL BOXES */
+[class^="small"] {
+    border-radius: 5px;
+    font-family: var(--font-secondary);
+    padding: 3rem;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 100px black,
+    -5px -5px 100px black,
+    -5px 5px 100px black,
+    5px -5px 100px black;
+
+    text-shadow: 10px 10px 10px black,
+    -10px -10px 10px black,
+    -10px 10px 10px black,
+    10px -10px 10px black;
+}
+
+
+
+
+
+/* BOX 1 */
+.small1 {
+    grid-area: small_1;
+    background: var(--color-foreground);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    ul {
+        list-style: none;
+    }
+
+    .list1 {
+        color: var(--color-four);
+        font-family: var(--font-primary);
+    }
+
+    .list2 {
+        text-align: end;
+        color: var(--color-one);
+        font-family: var(--font-primary);
+    }
+}
+
+
+
+
+
+
+
+/* BOX 2 */
+.small2 {
+    grid-area: small_2;
+    background: var(--color-foreground2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    
+
+    p {
+        text-align: center;
+        color: var(--color-three);
+
+    }
+
+
+    .fa-html5{
+        color: #e44d26;
+        font-size: 4rem;
+        text-shadow: none;
+    }
+
+    .fa-css3{
+        color: #264adc;
+        font-size: 4rem;
+        text-shadow: none;
+    }
+    .fa-js{
+        color: #e9d44d;
+        font-size: 4rem;
+        text-shadow: none;
+    }
+    .fa-react{
+        color: #61dbfb;
+        font-size: 4rem;
+        text-shadow: none;
+    }
+}
+
+
+
+
+/* BOX 3 */
+.small3 {
+    grid-area: small_3;
+    background: var(--color-foreground);
+    text-align: center;
+    padding-top: 4rem;
+
+
+    ul {
+        color: var(--color-four);
+        font-family: var(--font-primary);
+        list-style: none;
+    }
+
+    li {
+        color: var(--color-one);
+        font-family: var(--font-secondary);
+        margin-bottom: 1rem;
+    }
+    li:nth-of-type(1) {
+        margin-top: 2rem;
+    }
+
+
+
+}
+
+
+/* BOX 4 */
+.small4 {
+    grid-area: small_4;
+    background: var(--color-foreground2);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+
+    
+
+    p {
+        text-align: center;
+        color: var(--color-three);
+
+    }
+
+    .css2 {
+        display: flex;
+    }
+
+    svg {
+        height: 4rem;
+        width: 4rem;
+        margin: 1rem 0.5rem;
+    }
+
+    svg:hover {
+        transform: scale(1.5);
+    }
+
+
+}
+
+
+/* BOX 5 */
+.small5 {
+    grid-area: small_5;
+    background: var(--color-foreground);
+    text-shadow: none;
+    font-size: 1rem;
+    color: var(--color-three);
+    padding: 0;
+    img {
+        border: 20px solid black;
+        opacity: 50%;
+        border-radius: 5px;
+    }
+}
+
+/* BOX 6 */
+.small6 {
+    grid-area: small_6;
+    background: var(--color-foreground);
+    font-size: 1rem;
+    color: var(--color-three);
+    position: static;
+    z-index: 2;
+
+    p {
+        color: white;
+        margin-top: 2rem;
+        text-shadow: none;
+    }
+
+}
+
+/* BOX 7 */
+.small7 {
+    grid-area: small_7;
+    background: var(--color-foreground2);
+    font-size: 1rem;
+    color: var(--color-three);
+    position: static;
+    z-index: 2;
+
+    p {
+        color: white;
+        margin-top: 2rem;
+        text-shadow: none;
+    }
+}
+
+
+/* ? SMALL BOX HOVER */
+.small1:hover {
+    background: var(--color-foreground2);
+    filter: brightness(1.5);
+}
+.small2:hover {
+    background: var(--color-foreground);
+    filter: brightness(1.5);
+}
+.small3:hover {
+    background: var(--color-foreground2);
+    filter: brightness(1.5);
+}
+.small4:hover {
+    background: var(--color-foreground);
+    filter: brightness(1.5);
+}
+.small4:hover {
+    background: var(--color-foreground);
+    filter: brightness(1.5);
+}
+.small5 img:hover {
+    background: var(--color-foreground);
+    opacity: 100%;
+}
+.small6:hover {
+    background: var(--color-foreground2);
+    filter: brightness(1.5);
+}
+.small7:hover {
+    background: var(--color-foreground);
+    filter: brightness(1.5);
+}
+
+
+
+
+/* ! BIG 2 */
+.big2 {
+    grid-area: big2;
+    background: url(https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
+    background-position: top;
+    background-size: cover;
+    border-radius: 5px;
+    color: var(--color-one);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    z-index: 2;
+
+
+
+
+
+
+    box-shadow: 5px 5px 100px black,
+    -5px -5px 100px black,
+    -5px 5px 100px black,
+    5px -5px 100px black;
+
+
+    h1 {
+        text-shadow: 0 0 5px white;
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+.big2:hover {
+    filter: brightness(1.5);
+    h1 {
+        color: var(--color-two);
+        text-shadow: 1px 1px 10px black;
+    }
+}
+
+
+
+
+ /* ! FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background-color: var(--color-foreground2);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--color-two);
+   
+    p {
+        font-weight: 800;
+    }
+}
